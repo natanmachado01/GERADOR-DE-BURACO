@@ -1,0 +1,365 @@
+{
+    "fundacao": {
+      "entradas": [
+        {
+          "id": "entrada_padrao",
+          "nome": "Entrada do Buraco",
+          "descricao": "A Entrada define o ponto de partida da exploração do grupo, funcionando também como uma rota de fuga.",
+          "conexoes_min": 2,
+          "conexoes_max": 4
+        }
+      ],
+      "efeitos": [
+        {
+          "roll": 1,
+          "nome": "Amaldiçoado",
+          "subtitulo": "A Escuridão te despreza.",
+          "descricao": "A Escuridão não permite que as Personas se recuperem. Enquanto estiverem dentro do Buraco, todos os Equipamentos, Habilidades e outros efeitos que possibilitem recuperar pontos de Estresse recuperam apenas metade da quantia original."
+        },
+        {
+          "roll": 2,
+          "nome": "Assustador",
+          "subtitulo": "Só pode ser um pesadelo.",
+          "descricao": "A Escuridão se alimenta dos seus medos. Sempre que uma Persona perder pontos de Coragem dentro do Buraco, ela perde o dobro da quantidade original."
+        },
+        {
+          "roll": 3,
+          "nome": "Confortável",
+          "subtitulo": "Não dormia bem assim há anos!",
+          "descricao": "A Escuridão fornece um sono profundo, sem perturbações. Sempre que realizarem uma Cena de Descanso dentro do Buraco, as Personas recuperam todos os pontos de Estresse que tiverem acumulado até então."
+        },
+        {
+          "roll": 4,
+          "nome": "Escuro",
+          "subtitulo": "As luzes se apagaram.",
+          "descricao": "A Escuridão é mais densa aqui. Enquanto estiverem dentro do Buraco, todos os Combustíveis abastecem Fontes de Luz pela metade do tempo original. Além disso, outros efeitos que permitam criar luz, também são reduzidos à metade do tempo."
+        },
+        {
+          "roll": 5,
+          "nome": "Insônia",
+          "subtitulo": "Nós precisamos descansar.",
+          "descricao": "O sono não lhe encontrará aqui. Enquanto estiverem dentro do Buraco, não é possível realizar Cenas de Descanso."
+        },
+        {
+          "roll": 6,
+          "nome": "Mortal",
+          "subtitulo": "Não podemos cair aqui.",
+          "descricao": "A morte está à espreita. Toda vez que uma Persona alcançar seu limite máximo de Estresse dentro do Buraco, fica duas vezes Fora de Ação, em vez de apenas uma."
+        }
+      ],
+      "missoes": [
+        {
+          "roll": 1,
+          "id": "acabe_com_o_mal",
+          "nome": "Acabe com o Mal",
+          "subtitulo": "Esse lugar está infestado.",
+          "descricao": "Os lacaios da Escuridão precisam ser derrotados. As Personas precisam vencer uma quantidade de combates igual à metade do número de Personas no grupo (ou 1, o que for maior) + 1D4. Elas devem explorar o Buraco até encontrarem uma Carta de Encontro ou Objetivo e então rolar na Tabela de Objetivo para determinar o que acontece."
+        },
+        {
+          "roll": 2,
+          "id": "ache_a_saida",
+          "nome": "Ache a Saída",
+          "subtitulo": "Parece que não será tão fácil voltar para casa.",
+          "descricao": "O grupo precisa encontrar a saída do Buraco. Antes de começar a exploração, a Testemunha ou um Jogador do grupo deve rolar na Tabela de Objetivo correspondente para determinar efeitos adicionais. Após iniciarem a exploração, não é mais possível deixar o Buraco a partir da Carta de Entrada, fazendo com que precisem explorar o local até encontrar uma Carta de Saída ou Objetivo."
+        },
+        {
+          "roll": 3,
+          "id": "destrua_o_oculto",
+          "nome": "Destrua o Oculto",
+          "subtitulo": "Devemos destruir isso de uma vez por todas.",
+          "descricao": "A Escuridão protege algo que deve ser eliminado. As Personas precisam acabar com algo que se esconde no escuro, como um altar ou ritual. Elas devem explorar o Buraco até encontrarem uma Carta de Segredo ou Objetivo e então rolar na Tabela de Objetivo para determinar o que acontece."
+        },
+        {
+          "roll": 4,
+          "id": "devolva_ao_lar",
+          "nome": "Devolva ao Lar",
+          "subtitulo": "Coloque de volta, agora!",
+          "descricao": "A Escuridão busca reaver aquilo que lhe falta. As Personas começam a exploração com algo que deve ser retornado ao Oblívio, como uma Ameaça ou Equipamento Corrompido. Elas devem explorar o Buraco até encontrarem uma Carta de Vazio ou Objetivo e então rolar na Tabela de Objetivo para determinar o que acontece."
+        },
+        {
+          "roll": 5,
+          "id": "resgate_o_perdido",
+          "nome": "Resgate o Perdido",
+          "subtitulo": "O Buraco busca aquilo que não lhe pertence.",
+          "descricao": "A Escuridão busca tomar aquilo que não deve. As Personas precisam encontrar algo que foi perdido para o Oblívio e trazê-lo de volta, como um objeto ou pessoa. Elas devem explorar o Buraco até encontrarem uma Carta de Tesouro ou Objetivo e então rolar na Tabela de Objetivo."
+        },
+        {
+          "roll": 6,
+          "id": "salve_o_dia",
+          "nome": "Salve o Dia",
+          "subtitulo": "Precisamos viajar até o coração das trevas...",
+          "descricao": "O grupo precisa acabar com a fonte da Escuridão. As Personas precisam encontrar uma forma de impedir a materialização do Oblívio neste mundo, destruindo o seu avatar. Elas devem explorar o Buraco até encontrarem uma Carta de Objetivo e então rolar na Tabela de Objetivo para determinar o que acontece."
+        }
+      ]
+    },
+    "construcao": {
+      "formatos_conexao": [
+        { "id": "linha_v", "portas": ["norte", "sul"] },
+        { "id": "linha_h", "portas": ["leste", "oeste"] },
+        { "id": "curva_nl", "portas": ["norte", "leste"] },
+        { "id": "curva_no", "portas": ["norte", "oeste"] },
+        { "id": "curva_sl", "portas": ["sul", "leste"] },
+        { "id": "curva_so", "portas": ["sul", "oeste"] },
+        { "id": "t_norte", "portas": ["leste", "oeste", "norte"] },
+        { "id": "t_sul", "portas": ["leste", "oeste", "sul"] },
+        { "id": "t_leste", "portas": ["norte", "sul", "leste"] },
+        { "id": "t_oeste", "portas": ["norte", "sul", "oeste"] },
+        { "id": "cruzamento", "portas": ["norte", "sul", "leste", "oeste"] }
+      ],
+      "armadilha": [
+        {
+          "min_roll": 1,
+          "max_roll": 1,
+          "nome": "Claustrofobia",
+          "subtitulo": "Está ficando apertado.",
+          "descricao": "As Personas começam a ser esmagadas pela armadilha. Uma Cena de Tensão se inicia, onde os Jogadores têm 3 rodadas para obter pelo menos 2 sucessos em um teste de Esforço, Bandidagem ou outro similar para Escapar do perigo iminente. Se falharem, cada Persona recebe 3D4 Pontos de Estresse e fica Sem Fôlego."
+        },
+        {
+          "min_roll": 2,
+          "max_roll": 2,
+          "nome": "Coringa",
+          "subtitulo": "Dói, não é?",
+          "descricao": "Uma armadilha que pode ser usada a favor do grupo. A armadilha não dispara na primeira vez que o grupo adentrar esse cômodo. Contudo, na próxima vez que qualquer Persona ou Ameaça entrar na sua carta, a Testemunha (ou um Jogador), deve rolar novamente nesta tabela para determinar o efeito da Armadilha."
+        },
+        {
+          "min_roll": 3,
+          "max_roll": 3,
+          "nome": "Defeito",
+          "subtitulo": "Que sorte!",
+          "descricao": "Parece que vocês escaparam dessa vez. Nada acontece e o grupo pode continuar a sua exploração. Caso uma Persona realize um teste de Saber ou similar para desmontar a armadilha, recebe 1D4 Recursos."
+        },
+        {
+          "min_roll": 4,
+          "max_roll": 4,
+          "nome": "Explosão",
+          "subtitulo": "Vai ser um estouro.",
+          "descricao": "Um dispositivo escondido desencadeia uma explosão efetiva. A Testemunha, ou um Jogador, deve rolar 1D6 para determinar o tipo de explosão (1 ou 2: 1 Bomba Atordoante, 3 ou 4: 3D2 Bombas de Estalo, 5 ou 6: 2D4 Bombas Incendiárias). Todas as Personas devem realizar um teste de Reflexos para evitar a armadilha."
+        },
+        {
+          "min_roll": 5,
+          "max_roll": 5,
+          "nome": "Ferimento",
+          "subtitulo": "Isso vai doer.",
+          "descricao": "O grupo deve agir rápido, ou vão ganhar uma nova cicatriz. Todas as Personas devem realizar um teste de Reflexos para evitar a armadilha. Se falharem, recebem 3D4 Pontos de Estresse e uma Ferida igual ao dano causado."
+        },
+        {
+          "min_roll": 6,
+          "max_roll": 6,
+          "nome": "Visão",
+          "subtitulo": "Isso não pode ser real.",
+          "descricao": "Uma cena perturbadora abala a confiança do grupo. Todas as Personas devem realizar um teste de Emocional. Se falharem, perdem 1D6 Pontos de Coragem."
+        }
+      ],
+      "encontro_facil": [
+        { "roll": 1, "nome": "Arrastão", "subtitulo": "Pega ladrão!", "descricao": "3 Trombadinhas iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 2, "nome": "Mausoléu", "subtitulo": "Deviam ter continuado mortas.", "descricao": "1 Mortalha e 3 Golfos iniciam uma Cena de Combate com o grupo. Aquilo que mantém a Mortalha apegada a esse mundo é um Equipamento que está escondido nessa sala – é necessário 1 sucesso em testes de Rastro com uma Ação Regular para encontrá-lo e outra Ação Regular para destruí-lo. Role na Tabela de Recompensa." },
+        { "roll": 3, "nome": "Necrotério", "subtitulo": "Mire na cabeça.", "descricao": "2 Carcaças iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 4, "nome": "Pestilência", "subtitulo": "Não deixe-as se aproximar!", "descricao": "3 Pestes iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 5, "nome": "Podridão", "subtitulo": "É melhor manter distância...", "descricao": "5 Golfos iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 6, "nome": "Umbral", "subtitulo": "Estamos na terra dos mortos.", "descricao": "1 Mortalha e 1 Carcaça iniciam uma Cena de Combate com o grupo. Aquilo que mantém a Mortalha apegada a esse mundo é um Equipamento que está escondido nessa sala – é necessário 2 sucessos coletivos em testes de Rastro com uma Ação Regular para encontrá-lo e outra para destruí-lo. Role na Tabela de Recompensa." }
+      ],
+      "encontro_medio": [
+        { "roll": 1, "nome": "Contaminação", "subtitulo": "Use uma máscara!", "descricao": "3 Mutágenos iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 2, "nome": "Falsidade", "subtitulo": "Não acredite nas suas mentiras.", "descricao": "1 Quimera inicia uma Cena de Combate com o grupo. Role na Tabela de Recompensa da Ameaça derrotada." },
+        { "roll": 3, "nome": "Multidão", "subtitulo": "Abram caminho.", "descricao": "2 Enxames iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 4, "nome": "Obsessão", "subtitulo": "Nunca estão satisfeitos.", "descricao": "1 Coletor inicia uma Cena de Combate com o grupo. Role na Tabela de Recompensa da Ameaça derrotada." },
+        { "roll": 5, "nome": "Peçonha", "subtitulo": "Vai precisar de um hospital.", "descricao": "2 Pestes e 1 Cilada iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 6, "nome": "Umbral", "subtitulo": "Estamos na terra dos mortos.", "descricao": "3 Carcaças e 2 Mortalhas iniciam uma Cena de Combate com o grupo. Aquilo que mantém as Mortalhas apegadas a esse mundo é um Equipamento que está escondido em até uma das salas adjacentes – um Jogador deve rolar 1D6 (1 a 3: nesta sala, 4 a 6: na próxima). Necessários 4 sucessos coletivos de Rastro. Role na Tabela de Recompensa." }
+      ],
+      "encontro_dificil": [
+        { "roll": 1, "nome": "Contaminação", "subtitulo": "Use uma máscara!", "descricao": "3 Mutágenos e 1 Patógeno iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 2, "nome": "Caçada", "subtitulo": "Nós somos as presas aqui.", "descricao": "6 Pestes e 1 Errante iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 3, "nome": "Invasão", "subtitulo": "Querem a sua carne.", "descricao": "3 Mortalhas e 1 Coletor iniciam uma Cena de Combate com o grupo. O Equipamento âncora das Mortalhas está escondido em até duas salas adjacentes (role 1D6: 1 ou 2 nesta sala, 3 ou 4 na próxima, 5 ou 6 na seguinte investigada). Necessários 6 sucessos coletivos em Rastro. Role na Tabela de Recompensa." },
+        { "roll": 4, "nome": "Multidão", "subtitulo": "Abram caminho.", "descricao": "2 Enxames e 1 Rei dos Ratos iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 5, "nome": "Passeata", "subtitulo": "Vão passar por cima de nós!", "descricao": "3 Carcaças e 1 Horda iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." },
+        { "roll": 6, "nome": "Podridão", "subtitulo": "É melhor manter distância...", "descricao": "2 Amálgamas Golfadas e 6 Golfos iniciam uma Cena de Combate com o grupo. Role na Tabela de Recompensa das Ameaças derrotadas." }
+      ],
+      "infortunio": [
+        {
+          "min_roll": 1,
+          "max_roll": 1,
+          "nome": "Aposta",
+          "subtitulo": "Quais são as chances?",
+          "descricao": "Há chance de um grande risco, ou ganho, aqui. O grupo encontra algo misterioso, como uma porta fechada ou um baú, que gera um efeito caótico. Uma Persona do grupo deve rolar 1D6. De 1 a 3, todas sofrem 2D4 pontos de Estresse. De 4 a 6, todas recuperam 2D4 pontos de Estresse."
+        },
+        {
+          "min_roll": 2,
+          "max_roll": 2,
+          "nome": "Bolso Furado",
+          "subtitulo": "Parece que deixou algo cair.",
+          "descricao": "Talvez aqui, ou em outro lugar do caminho, a sua bolsa ficou mais leve. Todas as Personas devem rolar 1D6. Quem tiver o menor resultado, perde um dos seus Equipamentos Guardados. Essa perda pode ser determinada pela Testemunha ou rolando um dado equivalente à quantidade de Equipamentos Guardados."
+        },
+        {
+          "min_roll": 3,
+          "max_roll": 3,
+          "nome": "Déjà-vu",
+          "subtitulo": "Já vimos isso antes...",
+          "descricao": "A história se repete novamente. Na próxima vez que o grupo passar por um cômodo já explorado, o efeito da carta acontece mais uma vez. Caso prefiram, podem rolar na tabela correspondente para decidir um novo efeito naquele cômodo."
+        },
+        {
+          "min_roll": 4,
+          "max_roll": 4,
+          "nome": "Desmoronamento",
+          "subtitulo": "Cuidado com a cabeça.",
+          "descricao": "Algo está impedindo o caminho a seguir. Uma das conexões da carta com outras do Buraco é bloqueada, impedindo que o grupo siga por aquele caminho. Todas as Personas podem realizar um teste de Esforço, ou similar, para tentar desobstruir o caminho. É necessário um total de 3 sucessos em grupo."
+        },
+        {
+          "min_roll": 5,
+          "max_roll": 5,
+          "nome": "Drenagem",
+          "subtitulo": "Não me sinto bem.",
+          "descricao": "A Escuridão drena as suas forças. Todas as Personas devem realizar um teste de Emocional. Se falharem, devem rolar 1D6 para determinar qual dos seus Atributos Fixos será reduzido em 1 ponto (1 - Carne, 2 - Força, 3 - Fôlego, 4 - Coragem, 5 - Velocidade, 6 - Role novamente)."
+        },
+        {
+          "min_roll": 6,
+          "max_roll": 6,
+          "nome": "Mau Olhado",
+          "subtitulo": "Alguém quer o seu mal.",
+          "descricao": "Vocês sentem um mal estar súbito. Todas as Personas devem realizar um teste de Emocional. Se falharem, devem rolar 1D6 para determinar qual das mazelas a seguir vão receber: 1 - Botando para Fora, 2 - Carne Fraca, 3 - Ferida, 4 - Fome, 5 - Pegando Fogo, 6 - Sem Fôlego. No caso de Ferida e Pegando Fogo, role 2D4 para determinar o dano recebido."
+        }
+      ],
+      "objetivo": {
+        "acabe_com_o_mal": [
+          { "min_roll": 1, "max_roll": 2, "nome": "Dose Dupla", "subtitulo": "Tem muitas aqui!", "descricao": "As forças do Oblívio se multiplicam. A Testemunha, ou um Jogador, deve rolar na Tabela de Encontro para determinar quais Ameaças serão enfrentadas pelo grupo. Contudo, eles passam a enfrentar o dobro do número de ameaças original." },
+          { "min_roll": 3, "max_roll": 5, "nome": "Incentivo", "subtitulo": "Parece que estão mais fortes!", "descricao": "A Escuridão empodera seus lacaios. A Testemunha, ou um Jogador, deve rolar na Tabela de Encontro para determinar quais Ameaças serão enfrentadas. Contudo, todas as Ameaças recebem uma Ação Regular adicional em seus turnos." },
+          { "min_roll": 6, "max_roll": 6, "nome": "General", "subtitulo": "Derrotem a líder.", "descricao": "A Escuridão envia seus generais à guerra. A Testemunha, ou um Jogador, deve rolar na Tabela de Encontro para determinar quais Ameaças serão enfrentadas. Além das Ameaças roladas, uma Ameaça de Grau 5 aleatória se junta ao combate." }
+        ],
+        "ache_a_saida": [
+          { "min_roll": 1, "max_roll": 2, "nome": "Colapso Iminente", "subtitulo": "Esse lugar está caindo aos pedaços!", "descricao": "Tudo começa a ruir ao seu redor. Ao final de cada Cena de Jogo em que não escaparem do Buraco, as Personas sofrem 1D4 pontos de Estresse. O número de D4s rolados aumenta equivalente ao número de cenas passadas." },
+          { "min_roll": 3, "max_roll": 4, "nome": "Fim da Linha", "subtitulo": "Não vamos voltar tão cedo...", "descricao": "As rotas de fuga se tornam cada vez mais raras. Ao rolar na Tabela de Saída para determinar a natureza da carta, Saídas Falsas passam a ser obtidas com resultados de 1 a 3 no dado." },
+          { "min_roll": 5, "max_roll": 6, "nome": "Pique-Pega", "subtitulo": "Não vão nos deixar escapar!", "descricao": "A Escuridão envia seus lacaios atrás do grupo. Ao final de cada Cena de Jogo, a Testemunha, ou um Jogador, deve rolar 1D6 para determinar se alguma Ameaça ataca as Personas (5 ou 6) devendo então rolar na Tabela de Encontro ou se nada acontece (1 a 4). Caso o efeito Perseguidor esteja valendo, ele aparece no lugar de outras Ameaças." }
+        ],
+        "destrua_o_oculto": [
+          { "min_roll": 1, "max_roll": 2, "nome": "Portal", "subtitulo": "Elas não param de sair!", "descricao": "Um local que libera ameaças constantemente. O portal tem 5 de Proteção e 40 de limite de Estresse, podendo ser destruído com ataques ou desativado com 5 sucessos em testes de Místico, ou similar, em conjunto. Ao final de cada rodada em que não for destruído, novas ameaças entram (1ª rod.: 2 Grau 1; 2ª: 3 Grau 2; 3ª: 2 Grau 3; 4ª: 1 Grau 4; 5ª: 1 Grau 5; 6ª: 1 Grau 6)." },
+          { "min_roll": 3, "max_roll": 5, "nome": "Relicário", "subtitulo": "Ela está bem ali...", "descricao": "Um objeto poderoso guardado por armadilhas mortais. Após adentrarem esta carta, uma Cena de Tensão se inicia, onde os Jogadores têm 6 rodadas para obter um total de 12 sucessos em grupo em testes de Saber ou similar para desativar as armadilhas e chegar à relíquia em segurança." },
+          { "min_roll": 6, "max_roll": 6, "nome": "Ritual", "subtitulo": "Parece que algo está vindo.", "descricao": "Os lacaios da escuridão buscam materializá-la. Os Jogadores têm 3 rodadas para derrotar 5 Carcaças e impedir o ritual, antes que 1 Ameaça de Grau 5 seja invocada." }
+        ],
+        "devolva_ao_lar": [
+          { "min_roll": 1, "max_roll": 4, "nome": "Anomalia", "subtitulo": "Tudo vai ser destruído!", "descricao": "O Buraco começa a consumir a realidade ao seu redor. Após adentrarem esta carta, uma Cena de Tensão se inicia, onde os Jogadores têm 4 rodadas para obter um total de 8 sucessos em grupo em testes de Esforço, ou similar, para alcançar o centro da anomalia e retornar aquilo que havia sido tomado do Oblívio. A cada falha, as Personas sofrem 2D6 pontos de Estresse." },
+          { "min_roll": 5, "max_roll": 6, "nome": "Legião", "subtitulo": "Não vão nos deixar passar.", "descricao": "A Escuridão busca impedir os esforços do grupo. A Testemunha, ou um Jogador, deve rolar 1D6 para determinar qual grupo de Ameaças começam um combate com as Personas. Se rolar de 1 a 3, são 4 Ameaças de Grau 2 e 1 Ameaça de Grau 3. Se rolar 4 ou 5, são 2 Ameaças de Grau 4 e 1 de Grau 5. Se o resultado for 6, será 1 Ameaça de Grau 6." }
+        ],
+        "resgate_o_perdido": [
+          { "min_roll": 1, "max_roll": 4, "nome": "Falsa Esperança", "subtitulo": "Não está aqui.", "descricao": "O grupo ainda não encontra aquilo que procura. Role na Tabela de Tesouro e continue a exploração. Caso a última carta de Tesouro ou Objetivo do Baralho obtenha esse efeito, ele passa a ser considerado como 'Na Mosca'." },
+          { "min_roll": 5, "max_roll": 6, "nome": "Na Mosca", "subtitulo": "Achamos!", "descricao": "O grupo encontra aquilo que procura. Após recuperar o que buscavam, as Personas devem retornar à Entrada ou Saída mais próxima, sem rolar na Tabela de Tesouro para esta carta." }
+        ],
+        "salve_o_dia": [
+          { "min_roll": 1, "max_roll": 2, "nome": "Arena", "subtitulo": "Ninguém sai vivo daqui.", "descricao": "O local onde as presas da Escuridão são esmagadas. 1 Apogeu e 1 Errante iniciam uma Cena de Combate." },
+          { "min_roll": 3, "max_roll": 4, "nome": "Palácio", "subtitulo": "Estamos diante de Vossa Majestade.", "descricao": "O palanque para propagar a palavra do Oblívio. 1 Comensal e 4 Carcaças iniciam uma Cena de Combate." },
+          { "min_roll": 5, "max_roll": 6, "nome": "Praça", "subtitulo": "Alguém vai morrer hoje.", "descricao": "O local onde tudo vai para morrer. 1 Forca inicia uma Cena de Combate." }
+        ]
+      },
+      "saida": [
+        {
+          "min_roll": 1,
+          "max_roll": 1,
+          "nome": "Saída Falsa",
+          "subtitulo": "Era bom demais para ser verdade...",
+          "descricao": "A Carta de Saída é convertida em um Encontro, conforme o caminho adiante se revela como uma Ameaça traiçoeira. Uma Cilada inicia uma Cena de Combate com o grupo. Caso a última carta de Saída do Baralho obtenha esse efeito, ela automaticamente se torna uma Carta de Saída Normal."
+        },
+        {
+          "min_roll": 2,
+          "max_roll": 4,
+          "nome": "Saída Normal",
+          "subtitulo": "Nenhum perigo à vista!",
+          "descricao": "O grupo pode sair do Buraco a qualquer momento ou adentrá-lo em um momento futuro através desta carta."
+        },
+        {
+          "min_roll": 5,
+          "max_roll": 6,
+          "nome": "Saída de Emergência",
+          "subtitulo": "Finalmente, nós encontramos.",
+          "descricao": "Ao deixarem o Buraco por esta carta, as Personas recuperam todos os Pontos de Estresse acumulados em seus corpos. Contudo, não é mais possível retornar ao Buraco em um momento futuro através da carta."
+        }
+      ],
+      "segredo": [
+        {
+          "min_roll": 1,
+          "max_roll": 1,
+          "nome": "Acampamento",
+          "subtitulo": "Chegou a hora de descansar.",
+          "descricao": "Um recanto seguro em meio à Escuridão. O grupo pode realizar uma Cena de Descanso segura, sem precisar gastar uma Fogueira para isso."
+        },
+        {
+          "min_roll": 2,
+          "max_roll": 2,
+          "nome": "Atalho",
+          "subtitulo": "Será mais rápido por aqui!",
+          "descricao": "Um caminho mais curto em direção ao seu objetivo. Procure no Baralho até encontrar uma carta referente à sua Missão e coloque-a em uma das extremidades desta carta, mesmo que não possa realizar mais conexões. Após isso, embaralhe o Baralho novamente."
+        },
+        {
+          "min_roll": 3,
+          "max_roll": 3,
+          "nome": "Enfermaria",
+          "subtitulo": "Pronto, vai se sentir melhor.",
+          "descricao": "Uma ala médica com alguns remédios deixados para trás. Todas as Personas podem recuperar 5 pontos de Estresse dos seus corpos, além de realizar um teste de Rastro. Se pelo menos uma delas tiver um Sucesso Extremo, encontra um Kit de Primeiros Socorros."
+        },
+        {
+          "min_roll": 4,
+          "max_roll": 4,
+          "nome": "Jardim",
+          "subtitulo": "Finalmente, paz.",
+          "descricao": "Em meio à Escuridão, um local de luz para trazer conforto às suas mentes. Todas as Personas podem recuperar 1 ponto de Coragem, além de realizar um teste de Rastro. Se tiverem sucesso, cada uma encontra 1D2 Estimulantes."
+        },
+        {
+          "min_roll": 5,
+          "max_roll": 5,
+          "nome": "Oficina",
+          "subtitulo": "Hora do reparo.",
+          "descricao": "Uma sala de reparos que ainda pode servir para alguma coisa. Todas as Personas podem recuperar 5 pontos do limite de Estresse de um Equipamento à sua escolha, além de realizar um teste de Rastro. Se tiverem sucesso, cada uma encontra 1D4 Recursos."
+        },
+        {
+          "min_roll": 6,
+          "max_roll": 6,
+          "nome": "Passagem",
+          "subtitulo": "Isso estava aqui antes?",
+          "descricao": "Um caminho oculto para algum outro lugar. Esta carta cria uma conexão especial com outra carta do Buraco à escolha do grupo, mesmo que ambas não possam realizar mais conexões, não estejam adjacentes ou nem no mesmo andar."
+        }
+      ],
+      "tesouro": [
+        {
+          "roll": 1,
+          "nome": "Cofre",
+          "subtitulo": "Vamos encher os bolsos!",
+          "descricao": "Uma pequena quantia de dinheiro está à disposição do grupo. Cada Persona deve rolar 3D6 para determinar quantas moedas encontram."
+        },
+        {
+          "roll": 2,
+          "nome": "Contrabando",
+          "subtitulo": "Um pouco de tudo.",
+          "descricao": "Um punhado de itens que podem auxiliar o grupo. A Testemunha, ou um Jogador à escolha do grupo, deve rolar 1D6. Se rolar de 1 a 3, encontram 1D4 Armas – role outro D6 para determinar se são Leves (1 a 3), Médias (4 ou 5) ou Pesadas (6). Se rolar de 4 a 6, encontram 1D4 Proteções – role outro D6 para determinar se são Leves (1 a 3), Médias (4 ou 5) ou Pesadas (6)."
+        },
+        {
+          "roll": 3,
+          "nome": "Dica",
+          "subtitulo": "Isso deve nos ajudar!",
+          "descricao": "Uma informação útil para levar o grupo ao seu objetivo. Após adentrarem esta carta, todas as cartas adjacentes que ainda não foram exploradas têm os seus efeitos revelados ao grupo. Alternativamente, os Jogadores podem revelar uma carta do Buraco à sua escolha."
+        },
+        {
+          "roll": 4,
+          "nome": "Forja",
+          "subtitulo": "Agora posso ficar mais forte.",
+          "descricao": "Todo o necessário para incrementar seus itens. Cada Persona do grupo pode obter uma modificação à sua escolha para um de seus Equipamentos, sem precisar gastar recursos para isso."
+        },
+        {
+          "roll": 5,
+          "nome": "Santuário",
+          "subtitulo": "Não precisamos nos preocupar aqui.",
+          "descricao": "Um local intocado pela Escuridão. Cada Persona pode escolher entre: recuperar todos os seus pontos de Estresse, remover quaisquer mazelas do seu corpo ou receber 1D6 pontos de Coragem após entrarem nesta carta."
+        },
+        {
+          "roll": 6,
+          "nome": "Suprimentos",
+          "subtitulo": "Hora de reabastecer.",
+          "descricao": "Um estoque de equipamentos variados está à disposição do grupo. Cada Persona deve rolar 1D6 para determinar os Equipamentos que encontram: 1 ou 2 - 1D2 Combustível, 3 ou 4 - 1D4 Estimulante, 5 ou 6 - 1D6 Ração."
+        }
+      ],
+      "escada": {
+        "nome": "Escada",
+        "descricao": "Cartas de Escada representam um novo andar do Buraco, seja para cima ou para baixo. Quando tirar essa carta, tire também uma nova Carta de Entrada, deixe-a separada do restante do Buraco principal e comece a explorá-la em paralelo como seu novo andar."
+      },
+      "vazio": {
+        "nome": "Vazio",
+        "descricao": "Cartas de Vazio representam um local sem nenhum risco ou recompensa para os Jogadores, apenas um espaço vazio."
+      }
+    }
+  }

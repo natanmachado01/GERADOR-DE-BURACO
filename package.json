@@ -1,0 +1,24 @@
+{
+  "name": "gerador-de-buraco",
+  "version": "1.0.0",
+  "description": "Gerador de Buraco!",
+  "main": "gerador.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natanmachado01/GERADOR-DE-BURACO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/natanmachado01/GERADOR-DE-BURACO/issues"
+  },
+  "homepage": "https://github.com/natanmachado01/GERADOR-DE-BURACO#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Buracos - Oblívio RPG</title>
+  <link rel="stylesheet" href="gerador.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <aside class="sidebar">
+      <header>
+        <h1>GERADOR DE BURACOS</h1>
+        <p class="subtitle">Sistema Oblívio RPG</p>
+      </header>
+
+      <section class="control-section">
+        <h2>1. Fundação</h2>
+        <button id="btn-fundar" class="action-btn primary">Fundar Buraco</button>
+        
+        <div id="display-fundacao" class="info-box hidden">
+          <div class="info-item">
+            <span class="label">Efeito:</span>
+            <strong id="efeito-nome">---</strong>
+            <p id="efeito-desc" class="desc-text"></p>
+          </div>
+          <div class="info-item">
+            <span class="label">Missão:</span>
+            <strong id="missao-nome">---</strong>
+            <p id="missao-desc" class="desc-text"></p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <section class="control-section">
+        <h2>2. Geração do Mapa</h2>
+        
+        <div class="options">
+          <label for="tamanho-buraco">Tamanho do Buraco:</label>
+          <select id="tamanho-buraco" class="styled-select">
+            <option value="10">Curto (10 Cartas)</option>
+            <option value="20" selected>Padrão (20 Cartas)</option>
+            <option value="30">Longo (30 Cartas)</option>
+          </select>
+        </div>
+
+        <div class="options">
+          <label for="dificuldade-encontro">Nível de Encontro:</label>
+          <select id="dificuldade-encontro" class="styled-select">
+            <option value="facil">Fácil</option>
+            <option value="medio" selected>Médio</option>
+            <option value="dificil">Difícil</option>
+          </select>
+        </div>
+
+        <button id="btn-gerar" class="action-btn" disabled>Gerar Masmorra</button>
+      </section>
+    
+      <section id="secao-detalhes" class="control-section hidden">
+        <h2>3. Detalhes do Cômodo</h2>
+        <div class="info-box">
+          <div class="info-item">
+            <span class="label" id="detalhe-tipo">---</span>
+            <strong id="detalhe-nome" class="highlight">---</strong>
+            <em id="detalhe-subtitulo" class="flavor-text"></em>
+            <p id="detalhe-desc" class="desc-text"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-controls">
+        <button id="btn-limpar" class="danger-btn">Limpar Mesa</button>
+      </section>
+
+    </aside>
+
+    <main class="board-area">
+      <div id="map-container">
+        <div id="grid" class="grid-board">
+          <div class="empty-state">
+            <p>Clique em "Fundar Buraco" para iniciar a exploração.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="gerador.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS E PALETA DE CORES
+   ========================================== */
+   @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;700&display=swap');
+
+   :root {
+     --bg-color: #0c0c0c;       /* Preto profundo e desgastado */
+     --panel-bg: #161616;       /* Fundo um pouco mais claro para a barra lateral */
+     --text-main: #d4d4d4;      /* Cinza claro para o texto principal */
+     --text-muted: #888888;     /* Cinza mais escuro para subtítulos */
+     --accent-red: #c91a1a;     /* Vermelho saturado (sangue/alerta) */
+     --accent-dark: #6e0b0b;    /* Vermelho escuro para sombras/bordas */
+     --border-color: #333333;
+     --card-bg: #1e1e1e;
+   }
+   
+   * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+   
+   body {
+     font-family: 'Courier Prime', monospace;
+     background-color: var(--bg-color);
+     color: var(--text-main);
+     height: 100vh;
+     overflow: hidden; /* O mapa é que vai rolar, não a página inteira */
+   }
+   
+   /* ==========================================
+      LAYOUT PRINCIPAL
+      ========================================== */
+   .app-container {
+     display: flex;
+     height: 100vh;
+     width: 100vw;
+   }
+   
+   /* --- BARRA LATERAL (Controles) --- */
+   .sidebar {
+     width: 350px;
+     background-color: var(--panel-bg);
+     border-right: 2px solid var(--accent-dark);
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     overflow-y: auto;
+     box-shadow: 5px 0 15px rgba(0,0,0,0.8);
+     z-index: 10;
+   }
+   
+   .sidebar header h1 {
+     font-family: 'Oswald', sans-serif;
+     color: var(--accent-red);
+     text-transform: uppercase;
+     font-size: 1.5rem;
+     letter-spacing: 2px;
+     margin-bottom: 5px;
+   }
+   
+   .subtitle {
+     color: var(--text-muted);
+     font-size: 0.85rem;
+     font-style: italic;
+   }
+   
+   .control-section h2 {
+     font-family: 'Oswald', sans-serif;
+     font-size: 1.2rem;
+     border-bottom: 1px solid var(--border-color);
+     padding-bottom: 5px;
+     margin-bottom: 15px;
+     color: #fff;
+   }
+   
+   .divider {
+     border: 0;
+     height: 1px;
+     background-color: var(--border-color);
+     margin: 10px 0;
+   }
+   
+   /* --- ELEMENTOS DE UI --- */
+   .action-btn {
+     width: 100%;
+     padding: 12px;
+     background-color: #2a2a2a;
+     color: var(--text-main);
+     border: 1px solid var(--border-color);
+     font-family: 'Courier Prime', monospace;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.2s;
+     text-transform: uppercase;
+   }
+   
+   .action-btn:hover:not(:disabled) {
+     background-color: #3a3a3a;
+     border-color: var(--text-main);
+   }
+   
+   .action-btn.primary {
+     background-color: var(--accent-dark);
+     color: #fff;
+     border-color: var(--accent-red);
+   }
+   
+   .action-btn.primary:hover {
+     background-color: var(--accent-red);
+     box-shadow: 0 0 10px rgba(201, 26, 26, 0.5);
+   }
+   
+   .action-btn:disabled {
+     opacity: 0.3;
+     cursor: not-allowed;
+   }
+   
+   .danger-btn {
+     width: 100%;
+     padding: 10px;
+     background-color: transparent;
+     color: var(--text-muted);
+     border: 1px dashed var(--border-color);
+     font-family: 'Courier Prime', monospace;
+     cursor: pointer;
+     margin-top: auto;
+   }
+   
+   .danger-btn:hover {
+     color: var(--accent-red);
+     border-color: var(--accent-red);
+   }
+   
+   .options {
+     margin-bottom: 15px;
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+   }
+   
+   .options label {
+     font-size: 0.9rem;
+     color: var(--text-muted);
+   }
+   
+   .styled-select {
+     padding: 8px;
+     background-color: #000;
+     color: var(--text-main);
+     border: 1px solid var(--border-color);
+     font-family: 'Courier Prime', monospace;
+   }
+   
+   /* --- CAIXAS DE INFORMAÇÃO (As cartas puxadas) --- */
+   .info-box {
+     background-color: #000;
+     border: 1px solid var(--border-color);
+     border-left: 3px solid var(--accent-red);
+     padding: 15px;
+     margin-top: 15px;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+   }
+   
+   .info-item .label {
+     display: block;
+     font-size: 0.75rem;
+     color: var(--accent-red);
+     text-transform: uppercase;
+     margin-bottom: 2px;
+   }
+   
+   .info-item strong {
+     font-family: 'Oswald', sans-serif;
+     font-size: 1.1rem;
+     letter-spacing: 1px;
+   }
+   
+   .highlight {
+     color: #fff;
+   }
+   
+   .flavor-text {
+     display: block;
+     font-style: italic;
+     color: var(--text-muted);
+     font-size: 0.85rem;
+     margin: 5px 0;
+     border-left: 1px solid var(--text-muted);
+     padding-left: 8px;
+   }
+   
+   .desc-text {
+     font-size: 0.85rem;
+     line-height: 1.4;
+     margin-top: 5px;
+   }
+   
+   .hidden {
+     display: none !important;
+   }
+   
+   /* ==========================================
+      ÁREA DO TABULEIRO (MAPA)
+      ========================================== */
+   .board-area {
+     flex: 1;
+     position: relative;
+     background-image: 
+       linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+       linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+     background-size: 20px 20px; /* Aquele visual de papel quadriculado de RPG */
+     overflow: auto; /* Permite arrastar/rolar se a masmorra crescer muito */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   #map-container {
+     min-width: 100%;
+     min-height: 100%;
+     padding: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   /* O grid onde as cartas reais vão entrar depois via JS */
+   .grid-board {
+     position: relative;
+     /* Usaremos propriedades inline no JS para expandir este grid */
+   }
+   
+   .empty-state {
+     color: var(--text-muted);
+     font-style: italic;
+     text-align: center;
+     padding: 20px;
+     border: 1px dashed var(--border-color);
+   }
+   /* ==========================================
+   ESTILO DAS CARTAS NA MESA (COORDENADAS E ARRASTO)
+   ========================================== */
+.grid-board {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carta-mesa {
+    width: 140px;
+    height: 140px;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    /* Posicionamento Absoluto é o segredo para o mapa orgânico! */
+    position: absolute; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    /* Estilos para arrastar */
+    cursor: grab;
+    user-select: none;
+    transition: box-shadow 0.2s;
+    z-index: 1;
+  }
+  
+  .carta-mesa:active {
+    cursor: grabbing;
+    z-index: 100; /* Fica por cima das outras enquanto arrasta */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+  }
+  
+  .carta-mesa.entrada {
+    border-color: var(--text-main);
+    background-color: #222;
+    z-index: 2;
+  }
+  
+  .carta-tipo-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    color: var(--accent-red);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .carta-nome-label {
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  .carta-formato-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* Efeito para a carta clicada */
+.carta-mesa.selecionada {
+    border-color: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05); /* Dá um pequeno zoom na carta ativa */
+    z-index: 50 !important;
+  }
