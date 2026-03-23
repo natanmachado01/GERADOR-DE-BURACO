@@ -1,0 +1,17 @@
+# Dependências do Node
+node_modules/
+
+# Arquivos de Ambiente (Configurações Sensíveis)
+.env
+
+# Banco de Dados de Usuários (Contém senhas dos jogadores)
+users.json
+
+# Dados extraídos do Scraper (Opcional: se quiser que o repo venha limpo)
+worldcraft-db.json
+
+# Arquivos de sistema e logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
